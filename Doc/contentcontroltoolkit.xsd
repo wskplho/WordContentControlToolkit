@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://ContentControlToolkit"
+xmlns="http://ContentControlToolkit"
+elementFormDefault="qualified">
+    <xs:element name="form">
+      <xs:complexType>
+        <xs:sequence>          
+          <xs:element name="age">
+            <xs:simpleType>
+              <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1"/>
+                <xs:maxInclusive value="150"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>          
+          <xs:element name="browser">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="Internet Explorer"/>
+                <xs:enumeration value="Firefox"/>
+                <xs:enumeration value="Safari"/>
+              </xs:restriction>
+            </xs:simpleType>            
+          </xs:element>          
+          <xs:element name="initials">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z][A-Z][A-Z]"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>  
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Picnic" targetNamespace="http://tempuri.org/Picnic.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/Picnic.xsd" xmlns:mstns="http://tempuri.org/Picnic.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="PicNic" type="PicnicType">
+</xs:element>
+<xs:complexType name="PicnicType">
+<xs:sequence>
+<xs:element name="who" type="xs:string">Sam</xs:element>
+<xs:element name="location" type="xs:string">Reedville</xs:element>
+<xs:element name="date" type="xs:date">2007-08-12T00:00:00</xs:element>
+<xs:element name="locationType" type="LocationType">workshop</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="LocationType">
+<xs:restriction base="xs:string">
+<xs:enumeration value="shop" />
+<xs:enumeration value="campground" />
+<xs:enumeration value="house" />
+<xs:enumeration value="treehouse" />
+<xs:enumeration value="beach" />
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

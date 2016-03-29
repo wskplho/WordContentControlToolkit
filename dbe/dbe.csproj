@@ -1,0 +1,272 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{907C3838-D9F3-4A70-B0F8-39E8FD52C7EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dbe</RootNamespace>
+    <AssemblyName>dbe</AssemblyName>
+    <ApplicationIcon>img\dbe.ico</ApplicationIcon>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\DocGen.cs" />
+    <Compile Include="src\UiFmCcProps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmCcProps.Designer.cs">
+      <DependentUpon>UiFmCcProps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiFmCheckForUpdates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmCheckForUpdates.Designer.cs">
+      <DependentUpon>UiFmCheckForUpdates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiFmDocGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmDocGen.Designer.cs">
+      <DependentUpon>UiFmDocGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiFmLocator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmLocator.Designer.cs">
+      <DependentUpon>UiFmLocator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Cbi.cs" />
+    <Compile Include="src\Mbox.cs" />
+    <Compile Include="src\ShellApi.cs" />
+    <Compile Include="src\OmWriter.cs" />
+    <Compile Include="src\UiCtrlContentControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UiCtrlContentControls.Designer.cs">
+      <DependentUpon>UiCtrlContentControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Dal.cs" />
+    <Compile Include="src\DbeCore.cs" />
+    <Compile Include="src\UiFmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmMain.Designer.cs">
+      <DependentUpon>UiFmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\IdbContentLoader.cs" />
+    <Compile Include="src\IdbContentWriter.cs" />
+    <Compile Include="src\OmLoader.cs" />
+    <Compile Include="src\PkgLoader.cs" />
+    <Compile Include="src\PkgNavigator.cs" />
+    <Compile Include="src\PkgWriter.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="src\UiFmCcProps.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiFmCcProps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiFmCheckForUpdates.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiFmCheckForUpdates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiFmDocGen.resx">
+      <DependentUpon>UiFmDocGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiFmLocator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiFmLocator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiCtrlContentControls.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiCtrlContentControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiFmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiFmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiCtrlContentControlsHeader.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiCtrlContentControlsHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiCtrlCustomXmlPartsHeader.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiCtrlCustomXmlPartsHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiCtrlXmlTree.resx">
+      <DependentUpon>UiCtrlXmlTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiCtrlCustomXmlParts.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiCtrlCustomXmlParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiCtrlXmlTextEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiCtrlXmlTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiFmAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiFmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UiFmLicenseViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UiFmLicenseViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="src\UiCtrlContentControlsHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UiCtrlContentControlsHeader.Designer.cs">
+      <DependentUpon>UiCtrlContentControlsHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiCtrlCustomXmlPartsHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UiCtrlCustomXmlPartsHeader.Designer.cs">
+      <DependentUpon>UiCtrlCustomXmlPartsHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiCtrlXmlTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UiCtrlCustomXmlParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UiCtrlCustomXmlParts.Designer.cs">
+      <DependentUpon>UiCtrlCustomXmlParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiCtrlXmlTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UiCtrlXmlTextEditor.Designer.cs">
+      <DependentUpon>UiCtrlXmlTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiFmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmAbout.Designer.cs">
+      <DependentUpon>UiFmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UiFmLicenseViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UiFmLicenseViewer.Designer.cs">
+      <DependentUpon>UiFmLicenseViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\XmlUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\infoicon_better.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\open.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\save.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\infoicon_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\blank16x16.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\banner.jpg" />
+    <None Include="img\dbe.bmp" />
+    <Content Include="img\dbe.ico" />
+    <Content Include="dep\WindowsBase.dll" />
+    <None Include="Resources\DataContainer_NewRecordHS.png" />
+    <None Include="Resources\VSProject_generatedfile.bmp" />
+    <None Include="Resources\HtmlBalanceBracesHS.png" />
+    <None Include="Resources\PageUpHS.png" />
+    <None Include="Resources\revert.png" />
+    <None Include="Resources\reformat.png" />
+    <None Include="Resources\VSProject_genericfile.bmp" />
+    <None Include="Resources\CheckGrammarHS.png" />
+    <None Include="lic\license_mslpl.rtf" />
+    <None Include="lic\license_mslpl.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="img\wordlocator.png" />
+    <None Include="img\minus.png" />
+    <None Include="img\plus.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

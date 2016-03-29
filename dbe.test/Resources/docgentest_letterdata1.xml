@@ -1,0 +1,8 @@
+<root xmlns="LetterTest">
+  <to>Jack Smith</to>
+  <from>Matt Scott</from>
+  <place>
+    <at>Yankees Stadium</at>
+    <date>2/2/2010</date>
+  </place>
+</root>
